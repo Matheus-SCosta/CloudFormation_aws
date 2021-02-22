@@ -1,0 +1,21 @@
+Resources:
+  WebServers:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-2c
+      ImageId: ami-02bcbb802e03574ba
+      InstanceType: t2.micro
+      KeyName: particular
+      SecurityGroupIds: 
+          - "sg-0dfe69590a0c1f887"
+      Tags:
+          - Key: Name
+            Value: WebServerTeste
+          - Key: User
+            Value: Matheus   
+      Volumes:
+          - Device: /dev/xvdh 
+            VolumeId: vol-062437f255ae6fc58
+      SubnetId: subnet-fb1f52b7
+
+#https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html

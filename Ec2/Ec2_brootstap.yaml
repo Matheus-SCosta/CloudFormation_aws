@@ -1,0 +1,21 @@
+Resources:
+  WebServers:
+    Type: AWS::EC2::Instance
+    Properties:
+      AvailabilityZone: us-east-2c
+      ImageId: ami-02bcbb802e03574ba
+      InstanceType: t2.micro
+      KeyName: particular
+      SecurityGroups: 
+          - "testeterraform"
+      Tags:
+          - Key: Name
+            Value: WebServer2
+          - Key: User
+            Value: matheus.costa
+      UserData: IyEvYmluL2Jhc2gKICAgICAgICAgICAgICAgIHl1bSB1cGRhdGUgLXkKICAgICAgICAgICAgICAgIHl1bSBpbnN0YWxsIGh0dHBkIC15CiAgICAgICAgICAgICAgICBzZXJ2aWNlIGh0dHBkIHN0YXJ0CiAgICAgICAgICAgICAgICBjaGtjb25maWcgaHR0cGQgb24KICAgICAgICAgICAgICAgIGNkIC92YXIvd3d3L2h0bWwKICAgICAgICAgICAgICAgIGVjaG8gIjxodG1sPjxoMT5TaXRlIEZ1bmNpb25hbmRvIC0gd2Vic2VydmVyIDI8L2gxPjwvaHRtbD4iID4gaW5kZXguaHRtbA==
+
+
+#https://docs.aws.amazon.com/pt_br/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html           
+
+#Necessário converter texto para base64
